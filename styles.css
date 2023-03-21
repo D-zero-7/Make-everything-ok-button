@@ -1,0 +1,178 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+button {
+  padding: 0.1em 0.25em;
+  width: 35em;
+  height: 13.5em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+
+button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.5em;
+  width: 22.79em;
+  height: 8.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+button span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+button span:not(hover) {
+  transition: all 1s;
+}
+
+/* positioning of the button*/
+
+.uppermoon {
+  height: 95vh;
+  /* border: black 5px solid; */
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.theButton {
+  /* height: 95vh; */
+  /* border: 5px black solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* the loader css */
+
+.loader {
+  display: block;
+  position: absolute;
+  height: 35px;
+  width: 300px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  color: rgb(179, 58, 58);
+  overflow: hidden;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.beforeOne::before {
+  content: "";
+  background: rgb(0, 212, 39);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  animation: loading_302 5s linear infinite;
+}
+
+@keyframes loading_302 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* the card css */
+
+.card {
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  border-radius: 0.5rem;
+  max-width: 40%;
+  height: 30%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  visibility: hidden;
+}
+
+.dismiss {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #cdd7e6;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  transition: 0.3s ease;
+}
+
+.dismiss:hover {
+  background-color: #ee0d0d;
+  border: 2px solid #ee0d0d;
+  color: #fff;
+}
+
+.header {
+  padding: 1.25rem 1rem 1rem 1rem;
+}
+
+/*  */
+
+.content {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.title {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+}
+
+.message {
+  margin-top: 0.5rem;
+  color: #252527;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+.loaderP {
+  visibility: hidden;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 3.5rem;
+  /* border: 3px solid #000000; */
+  margin-bottom: -40%;
+}
